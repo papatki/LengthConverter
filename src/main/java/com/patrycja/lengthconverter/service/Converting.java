@@ -140,13 +140,13 @@ public class Converting {
         }
     }
 
-    private double convert(double number, double exponent) {
+    public double convert(double number, double exponent) {
         DecimalFormat decimalFormat = new DecimalFormat("#.##########");
         double result = Math.pow(10, exponent) * number;
         return Double.valueOf(decimalFormat.format(result));
     }
 
-    private static boolean isNum(String strNum) {
+    public boolean isNum(String strNum) {
         boolean ret = true;
         try {
             Double.parseDouble(strNum);
@@ -156,9 +156,3 @@ public class Converting {
         return ret;
     }
 }
-
-
-
-
-
-
